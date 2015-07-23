@@ -28,7 +28,7 @@ QuickBooks_Loader::load('/QuickBooks/QBXML/Object/CreditMemo/CreditMemoLine.php'
  * QuickBooks object class
  */
 
-class Quickbooks_QBXML_Object_CreditMemo extends QuickBooks_QBXML_Object
+class QuickBooks_QBXML_Object_CreditMemo extends QuickBooks_QBXML_Object
 {
  	/**
 	 * Create a new QuickBooks_Object_Customer object
