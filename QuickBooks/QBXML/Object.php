@@ -814,7 +814,7 @@ abstract class QuickBooks_QBXML_Object
 		
 		//print('trying to create type: {' . $type . '}' . "\n");
 		
-		$class = 'QuickBooks_QBXML_Object_' . ucfirst(strtolower($type));
+		$class = 'QuickBooks_QBXML_Object_' . $type;// this was: ucfirst(strtolower($type));
 		
 		if (true) 		//class_exists($class, false))
 		{
@@ -856,6 +856,13 @@ abstract class QuickBooks_QBXML_Object
 						'InvoiceLineRet' => array( 'QuickBooks_QBXML_Object_Invoice_InvoiceLine', 'addInvoiceLine' ), 
 						);
 					
+					break;
+				case QUICKBOOKS_OBJECT_CREDITMEMO:
+
+					$children = array(
+						'CreditMemoLineRet' => array( 'QuickBooks_QBXML_Object_CreditMemo_CreditMemoLine', 'addCreditMemoLine' ),
+					);
+
 					break;
 				case QUICKBOOKS_OBJECT_ESTIMATE:
 					
