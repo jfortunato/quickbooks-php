@@ -1083,11 +1083,11 @@ class QuickBooks_WebConnector_Handlers
 	{
 		if ($which == 0)
 		{
-			return QuickBooks_Callbacks::callRequestHandler($this->_driver, $this->_map, $requestID, $action, $user, $action, $ident, $extra, $err, $last_action_time, $last_actionident_time, $xml_or_version, $qb_identifier_or_locale, $this->_callback_config, $qbxml);
+			return QuickBooks_Callbacks::callRequestHandler($this->_driver, $this->_map, $requestID, $action, $user, $ident, $extra, $err, $last_action_time, $last_actionident_time, $xml_or_version, $qb_identifier_or_locale, $this->_callback_config, $qbxml);
 		}
 		else if ($which == 1)
 		{
-			return QuickBooks_Callbacks::callResponseHandler($this->_driver, $this->_map, $requestID, $action, $user, $action, $ident, $extra, $err, $last_action_time, $last_actionident_time, $xml_or_version, $qb_identifier_or_locale, $this->_callback_config, $qbxml);
+			return QuickBooks_Callbacks::callResponseHandler($this->_driver, $this->_map, $requestID, $action, $user, $ident, $extra, $err, $last_action_time, $last_actionident_time, $xml_or_version, $qb_identifier_or_locale, $this->_callback_config, $qbxml);
 		}
 		
 		$err = 'Request for a mapped function could not be fulfilled, invalid $which parameter.';
