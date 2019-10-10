@@ -742,9 +742,7 @@ class QuickBooks_Utilities
 		if ($order_for_mapping)
 		{
 			// Sort with the very longest values first, to the shortest values last
-			
-			$func = create_function('$a, $b', ' if (strlen($a) > strlen($b)) { return -1; } return 1; ');
-			usort($constants, $func);
+            usort($constants, function($a, $b){ return strlen($a) > strlen($b) ? -1 : 1; });
 		}
 		else
 		{
